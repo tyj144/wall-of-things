@@ -1,9 +1,10 @@
 from django.shortcuts import render
+from collection.models import Thing
 
 def index(request):
-    number = 4
-    thing = "Thing 1"
+    # get all Thing objects from database
+    things = Thing.objects.all()
+
     return render(request, 'index.html', {
-        'number': number,
-        'thing': thing,
+        'things': things,
     })

@@ -1,3 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica",  "Arial", sans-serif;
+    margin: 0 auto;
+    max-width: 50em;
+
+    text-align: center;
+
+    line-height: 1.5;
+    padding: 4em 1em;
+}
+
+h1 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+ul {
+    list-style: none;
+    /* ensure no indent */
+    padding: 0;
+    margin: 0;
 }
