@@ -6,7 +6,13 @@
 
 {% block content %}
     <h1>Welcome to the Wall</h1>
-    <p>Write about something (but one thing only)!</p>
+    <p>
+    {% if user.is_authenticated %}
+        Write 
+    {% else %}
+        Log in to write
+    {% endif %}
+        about something (but one thing only)!</p>
 
     {% for thing in things %}
         <h2>
