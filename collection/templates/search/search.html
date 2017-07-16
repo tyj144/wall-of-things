@@ -17,6 +17,7 @@
     {% for thing in things %}
     <ul>
         <li>
+            <br>
             <a href="{% url 'thing_detail' slug=thing.slug %}">{{ thing.name }}</a>
         </li>
     </ul>

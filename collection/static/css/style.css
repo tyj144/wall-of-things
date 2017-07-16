@@ -1,25 +1,96 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300';
+
+
+header {
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* bottom, image */
+    url("../images/header.jpg");
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    max-width: none;
+    padding: 10vw 2em;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+/*header nav {
+    padding-top: 2em;
+}
+*/
+header a, footer a {
+    border: 1px solid white;
+    border-radius: 290486px;
+    color: white;
+    font-weight: 300;
+
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+
+    text-transform: uppercase;
+    /* removes underline from link */
+    text-decoration: none;
+
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+}
+
+header a:hover, footer a:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: #0B486B;
+}
+
+header li {
+    margin: 1em 0;
+    /* horizontal alignment and center */
+    display: inline-block;
+}
 
 body {
-    font-family: "Roboto",  "Arial", sans-serif;
+    font-family: Lato, Arial, sans-serif;
     margin: 0 auto;
-    max-width: 50em;
+    /*max-width: 50em;*/
 
     text-align: center;
 
+    /* spacing */
     line-height: 1.5;
-    padding: 4em 1em;
 
-    color: #333;
+    background-color: black;
+    color: white;
+}
+
+#main {
+    min-height: 24em;
+    margin: 2em 0;
+}
+
+a {
+    color: #4ECDC4;
 }
 
 h1 {
-    margin-top: 1em;
-    padding-top: 1em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
 }
 
 h1, h2, strong {
-    color: #111;
+    color: #eee;
 }
 
 ul {
@@ -27,4 +98,59 @@ ul {
     /* ensure no indent */
     padding: 0;
     margin: 0;
+}
+
+p {
+    font-family: Open Sans, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.errorlist {
+    color: #FF6B6B;
+}
+
+input {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5em;
+
+    outline: none;
+}
+
+button[type=sumbit] {
+    border: 1px solid white;
+    border-radius: 290486px;
+    background-color: transparent;
+
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    color: white;
+    padding: 0.75em;
+}
+
+button[type=sumbit]:hover {
+    color: black;
+    border: 1px solid #9DE0AD;
+    background-color: #9DE0AD;
+}
+
+.helptext {
+    padding-top: 0.5em;
+    display: block;
+    color: #bbb;
+}
+
+textarea {
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+
+    padding: 1em;
+}
+
+footer {
+    padding: 4em 0;
 }

@@ -4,14 +4,14 @@
     <head>
 	<title>
             {% block title %}
-                Hello Web App Project
+                Wall of Things
             {% endblock title %}
         </title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     </head>
     <body>
         <header>
-            <h1>Hello Web App</h1>
+            <h1>Wall of Things</h1>
             <nav>
                 <ul>
                     <li>
@@ -26,11 +26,13 @@
                     <li>
                         <a href="{% url 'browse' %}">Browse</a>
                     </li>
-                    {% if user.is_authenticated %}
+                </ul>
+                <ul>
+                {% if user.is_authenticated %}
                         <li>
                             <a href="{% url 'auth_logout' %}">Logout</a>
                         </li>
-		        <li>
+                        <li>
                             <a href="{% url 'password_change' %}">Change Password</a>
                         </li>
                     {% else %}
@@ -42,7 +44,14 @@
                 </ul>
             </nav>
         </header>
-        {% block content %}{% endblock content %}
-        {% block footer %}{% endblock footer %}
+        <div id="main">
+            
+            {% block content %}{% endblock content %}
+            {% block footer %}{% endblock footer %}
+        </div>
+        <footer>
+            <a href="https://github.com/tyj144">Made by @tyj144</a>
+            <a href="http://jgthms.com/web-design-in-4-minutes/">Design from @jgthms</a>
+        </footer>
     </body>
 </html>
