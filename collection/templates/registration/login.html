@@ -2,17 +2,28 @@
 {% block title %}
     Login - {{ block.super }}
 {% endblock title %}
+{% block style %}
+    h1 {
+        padding-top: 0;
+    }
+    #login {
+        padding: 1.5em;
+    }
+{% endblock %}
 
 {% block content %}
+<div id="login">
+    <i class="fa fa-users fa-4x" aria-hidden="true"></i>
     <h1>Login</h1>
     <form role="form" action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="sumbit">Submit</button>
+        <button type="sumbit"><i class="fa fa-sign-in" aria-hidden="true"></i>  Sign In</button>
     </form>
     <p>
         <a href="{% url 'password_reset' %}">
             Forgot your password?
         </a>
     </p>
+</div>
 {% endblock content %}

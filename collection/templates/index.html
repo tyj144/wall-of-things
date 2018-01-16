@@ -10,16 +10,19 @@
     {% if user.is_authenticated %}
         Write 
     {% else %}
-        Log in to write
+        <a href="{% url 'auth_login' %}">Log in</a> to write
     {% endif %}
-        about something (but one thing only)!</p>
+        something on it.</p>
 
     {% for thing in things %}
+    <div class="thing">
         <h2>
             <a href="{% url 'thing_detail' slug=thing.slug %}">
                 {{ thing.name }}
             </a>
         </h2>
+        <p>by {{ thing.user }}</p>
         <p>{{ thing.description }}</p>
+    </div>
     {% endfor %}
 {% endblock content %}
