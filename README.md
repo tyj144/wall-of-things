@@ -3,5 +3,4 @@ Wall of Things was created by me, Tyler Jiang, and was the first web app I ever 
 
 The frontend was designed using HTML, CSS, and Bootstrap while the backend was built using Django with the help of Hello Web App. The messages on the wall are stored in a database using PostgreSQL.
 
-# Demo
 ![Screenshot of Wall of Things](http://tylerjiang.me/img/wall-of-things.png)
